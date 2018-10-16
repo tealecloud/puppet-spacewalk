@@ -118,14 +118,15 @@ class spacewalk::setup (
       cwd     => '/root',
       command => '/bin/postgresql-setup initdb',
       unless  => '/bin/test -d /var/lib/pgsql/data',
+      before => Exec['spacewalk-setup'],
     }
-  }->
+  }
 
   exec {'spacewalk-setup':
     cwd         => '/root',
     command     => '/usr/bin/spacewalk.sh',
     refreshonly => true,
     logoutput   => on_failure,
-    require     => File['/etc/sysconfig/spacewalk.answer','/usr/bin/spacewalk.sh'],
+    require     => [ File['/etc/sysconfig/spacewalk.answer','/usr/bin/spacewalk.sh'], Exec['postgres-init'] ],
   }
 }
