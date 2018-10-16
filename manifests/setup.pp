@@ -127,6 +127,6 @@ class spacewalk::setup (
     command     => '/usr/bin/spacewalk.sh',
     refreshonly => true,
     logoutput   => on_failure,
-    require     => [ File['/etc/sysconfig/spacewalk.answer','/usr/bin/spacewalk.sh'], Exec['postgres-init'] ],
+    require     => [ File['/etc/sysconfig/spacewalk.answer','/usr/bin/spacewalk.sh'] ],
   }
 }
