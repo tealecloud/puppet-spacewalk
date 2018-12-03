@@ -6,7 +6,7 @@
 class spacewalk::params {
 
   case $::operatingsystem {
-    'RedHat', 'CentOS', 'Fedora': {
+    'OracleLinux', 'RedHat', 'CentOS', 'Fedora': {
 
       $db_backend                  = 'postgresql'
       $postgresql_embedded         = true
