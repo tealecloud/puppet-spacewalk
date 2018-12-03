@@ -21,14 +21,14 @@
       "version_requirement": ">= 3.8.7 < 5.0.0"
     }
   ],
-  "name": "CommanderK5-spacewalk",
+  "name": "tealecloud-spacewalk",
   "version": "1.0.0",
   "author": "Lukasz Rohde",
   "summary": "Puppet Spacewalk Module",
   "description": "The spacewalk module handles installing, configuring, and running Spacewalk server on Redhat based oparting systems.",
   "license": "MIT",
-  "source": "https://github.com/CommanderK5/puppet-spacewalk",
-  "issues_url": "https://github.com/CommanderK5/puppet-spacewalk/issues",
+  "source": "https://github.com/tealecloud/puppet-spacewalk",
+  "issues_url": "https://github.com/tealecloud/puppet-spacewalk/issues",
   "dependencies": [
 
   ]
