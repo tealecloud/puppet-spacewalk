@@ -10,7 +10,7 @@ class spacewalk::repo::server (
 ){
 
   case $::osfamily {
-    'RedHat': {
+    'OracleLinux', 'RedHat': {
 
       yumrepo {'spacewalk-project':
         enabled  => $spacewalk_repo_enabled,
