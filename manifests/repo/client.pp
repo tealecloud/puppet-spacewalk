@@ -13,7 +13,7 @@ class spacewalk::repo::client (
         descr    => "Spacewalk Client ${client_repo_release} Repository",
         gpgcheck => $client_repo_gpgcheck,
         gpgkey   => $client_repo_gpgkey,
-        baseurl =>  "https://copr-be.cloud.fedoraproject.org/results/@spacewalkproject/spacewalk-2.8/fedora-${::operatingsystemmajrelease}-\$basearch/",
+        baseurl =>  "https://copr-be.cloud.fedoraproject.org/results/@spacewalkproject/spacewalk-2.8/epel-${::operatingsystemmajrelease}-\$basearch/",
       }
     }
 
